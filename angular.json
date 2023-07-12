@@ -31,7 +31,9 @@
             ],
             "styles": [
               "src/styles.scss",
-              "dist/output.css"
+              "dist/output.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
             ],
             "scripts": []
           },
