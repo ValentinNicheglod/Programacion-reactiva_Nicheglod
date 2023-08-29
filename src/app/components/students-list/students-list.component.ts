@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-students-list',
@@ -7,13 +8,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class StudentsListComponent {
 
-  @Output() openEditUserModal: EventEmitter<number> = new EventEmitter();
-  @Output() openDeleteUserConfirmation: EventEmitter<number> = new EventEmitter();
   columns: string[] = ['id', 'fullName', 'email'];
+  users;
 
-  users = [
-    { id: 1, firstName: 'John', lastName: 'Doe', email: 'johndoe@example.com' },
-    { id: 2, firstName: 'Jane', lastName: 'Smith', email: 'janesmith@example.com' },
-    { id: 3, firstName: 'Bob', lastName: 'Johnson', email: 'bobjohnson@example.com' }
-  ];
+  constructor(userService: UsersService) {
+    this.users = userService.getUsers();
+  }
 }

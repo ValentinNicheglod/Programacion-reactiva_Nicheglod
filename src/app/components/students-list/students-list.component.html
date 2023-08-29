@@ -1,4 +1,4 @@
-<table *ngIf="users.length" mat-table [dataSource]="users">
+<table *ngIf="(users | async).length" mat-table [dataSource]="users | async">
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> ID </th>
     <td mat-cell *matCellDef="let user"> {{ user.id }} </td>

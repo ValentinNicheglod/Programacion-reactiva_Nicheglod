@@ -10,6 +10,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { StudentsListComponent } from './components/students-list/students-list.component';
 import { FullNamePipe } from './pipes/full-name.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HighlightDirective } from './directives/highlight.directive';
   imports: [
     BrowserModule,
     MatTableModule,
+    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],
