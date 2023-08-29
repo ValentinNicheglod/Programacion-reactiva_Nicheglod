@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainWrapperComponent } from './main-wrapper.component';
+import { StudentsListComponent } from './students-list.component';
 
-describe('MainWrapperComponent', () => {
-  let component: MainWrapperComponent;
-  let fixture: ComponentFixture<MainWrapperComponent>;
+describe('StudentsListComponent', () => {
+  let component: StudentsListComponent;
+  let fixture: ComponentFixture<StudentsListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainWrapperComponent ]
+      declarations: [ StudentsListComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MainWrapperComponent);
+    fixture = TestBed.createComponent(StudentsListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
